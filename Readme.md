@@ -15,17 +15,17 @@ Readify is a book application that helps users organize their reading schedule. 
 ### Installation and Usage
 To install and use Readify, follow these steps:
 
-Clone the repository to your local machine.
-Navigate to the project directory and run npm install to install the necessary dependencies.
-Run npm start to start the development server.
-Open your web browser and navigate to http://localhost:3000 to view the app.
+Clone the repository to your local machine.  
+Navigate to the project directory and run npm install to install the necessary dependencies.  
+Run npm start to start the development server.  
+Open your web browser and navigate to http://localhost:3000 to view the app.  
 
 ### Technologies Used
 Readify is built using React, a popular JavaScript library for building user interfaces. It also uses several other libraries and tools, including:
 
-React Router: for client-side routing and navigation.
-Axios: for making API requests to external data sources.
-Bootstrap: for styling and layout.
+React Router: for client-side routing and navigation.  
+Axios: for making API requests to external data sources.  
+Bootstrap: for styling and layout.  
 
 ### Contributing
 If you are interested in contributing to Readify, please submit a pull request or open an issue on the GitHub repository. We welcome contributions of all kinds, including bug fixes, feature enhancements, and documentation improvements.
