@@ -4,7 +4,16 @@ export const BookCard = ({ data }) => {
   return (
     <div>
       {data.map((book, index) => {
-        return <p key={index}>{book.volumeInfo.title}</p>;
+        return (
+          <div key={index}>
+            <p>{book.volumeInfo.title}</p>
+            <img
+              src={book.volumeInfo.imageLinks.thumbnail}
+              alt=""
+              key={index}
+            />
+          </div>
+        );
       })}
     </div>
   );
