@@ -1,14 +1,14 @@
-const axios = require("axios");
+import axios from "axios";
 
 const APIKEY = "AIzaSyCzwGl8yfmrxI2MSmEveV0YZhpIxjP2DOg";
 const baseURL = "https://www.googleapis.com";
 const endPoint = `/books/v1/volumes`;
 
 const BookRequests = {
-  getBookBySearch: async (searchValue) => {
+  getBookBySearch: async (searchParams) => {
     try {
       const response = await axios.get(
-        `${baseURL}${endPoint}?q=${searchValue}&key=${APIKEY}`
+        `${baseURL}${endPoint}?q=${searchParams}&key=${APIKEY}`
       );
 
       const books = await response.data.items;
