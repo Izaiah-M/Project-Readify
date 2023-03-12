@@ -21,4 +21,6 @@ const BookRequests = {
   },
 };
 
-BookRequests.getBookBySearch("react");
+// BookRequests.getBookBySearch("react");
+
+export default BookRequests;
