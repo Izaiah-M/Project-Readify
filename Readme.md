@@ -2,7 +2,7 @@
 Readify is a book application that helps users organize their reading schedule. With Readify, you can search for books, add them to your schedule or favorites, set reminders for when to read, and even generate a random list of good books to read. Readify makes it easy to discover new books, stay on track with your reading, and become more informed and knowledgeable through literature.
 
 ### Features
-*Book search*: With Readify, you can search for books by title, author, or keyword. The app provides results from a variety of sources, including public domain works and modern bestsellers.
+*_Book search_*: With Readify, you can search for books by title, author, or keyword. The app provides results from a variety of sources, including public domain works and modern bestsellers.
 
 *Book acquisition*: Once you have found a book you want to read, you can acquire it through various means, including purchasing from online retailers or borrowing from a library.
 
