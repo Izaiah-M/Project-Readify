@@ -9,6 +9,7 @@ export const SearchInput = ({
     <div>
       <form onSubmit={handleSubmit}>
         <input
+          required
           type="text"
           placeholder="Search"
           value={searchParams}

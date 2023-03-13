@@ -1,16 +1,30 @@
 import React from "react";
+import { Route, Routes } from "react-router";
 import "./App.css";
 import { Books } from "./components/Books/Books";
-import { SideNav } from "./components/SideNav/SideNav";
+import { Dashboard } from "./components/Dashboard/Dashboard";
+import { MySideNav } from "./components/SideNav/SideNav";
 
 function App() {
+  const ROUTES = {
+    DASHBOARD: "/dashboard",
+    BOOKSEARCH: "/book-search",
+    UPCOMING: "/upcoming",
+  };
+
   return (
     <div className="App">
-      <div>
-        <SideNav />
-      </div>
-      {/* <header className="App-header">Readify!!</header> */}
-      <Books />
+      <MySideNav />
+      <main>
+        <Routes>
+          <Route path={ROUTES.DASHBOARD} element={<Dashboard />} />
+          <Route path={ROUTES.BOOKSEARCH} element={<Books />} />
+        </Routes>
+      </main>
+
+      {/* <header className="App-header">
+        <Dashboard />
+      </header> */}
     </div>
   );
 }
