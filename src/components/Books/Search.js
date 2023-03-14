@@ -2,9 +2,10 @@ import React, { useState } from "react";
 import { SearchInput } from "./SearchInput";
 
 import BookRequests from "../../utils/Config";
-import { BookCard } from "./BookCard/BookCard";
+import { Book } from "./Book";
+import "./Search.css";
 
-export const Books = () => {
+export const Search = () => {
   const [data, setData] = useState([]);
   const [searchParams, setSearchParams] = useState("");
 
@@ -33,14 +34,13 @@ export const Books = () => {
   };
 
   return (
-    <div>
-      Book
+    <div className="search">
       <SearchInput
         searchParams={searchParams}
         setSearchParams={searchParamsSet}
         handleSubmit={handleSubmit}
       />
-      <BookCard data={data} />
+      <Book data={data} />
     </div>
   );
 };

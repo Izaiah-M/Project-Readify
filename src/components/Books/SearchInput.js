@@ -1,4 +1,4 @@
-import React from "react";
+import "./SearchInput.css";
 
 export const SearchInput = ({
   handleSubmit,

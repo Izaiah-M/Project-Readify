@@ -1,4 +1,5 @@
 import axios from "axios";
+// const axios = require("axios");
 
 const APIKEY = "AIzaSyCzwGl8yfmrxI2MSmEveV0YZhpIxjP2DOg";
 const baseURL = "https://www.googleapis.com";
@@ -11,7 +12,16 @@ const BookRequests = {
         `${baseURL}${endPoint}?q=${searchParams}&key=${APIKEY}`
       );
 
-      const books = await response.data.items;
+      const jsonResponse = await response.data.items;
+
+      const books = jsonResponse.map((book) => ({
+        id: book.accessInfo.id,
+        author: book.volumeInfo.authors,
+        category: book.volumeInfo.categories,
+        description: book.volumeInfo.description,
+        image: book.volumeInfo.imageLinks.thumbnail,
+        title: book.volumeInfo.title,
+      }));
 
       //   console.log(books);
       return books;
@@ -21,6 +31,6 @@ const BookRequests = {
   },
 };
 
-// BookRequests.getBookBySearch("react");
+// console.log(await BookRequests.getBookBySearch("react"));
 
 export default BookRequests;

@@ -1,7 +1,7 @@
 import React from "react";
 import { Route, Routes } from "react-router";
 import "./App.css";
-import { Books } from "./components/Books/Books";
+import { Search } from "./components/Books/Search";
 import { Dashboard } from "./components/Dashboard/Dashboard";
 import { MySideNav } from "./components/SideNav/SideNav";
 
@@ -18,13 +18,9 @@ function App() {
       <main>
         <Routes>
           <Route path={ROUTES.DASHBOARD} element={<Dashboard />} />
-          <Route path={ROUTES.BOOKSEARCH} element={<Books />} />
+          <Route path={ROUTES.BOOKSEARCH} element={<Search />} />
         </Routes>
       </main>
-
-      {/* <header className="App-header">
-        <Dashboard />
-      </header> */}
     </div>
   );
 }
