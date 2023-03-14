@@ -20,7 +20,9 @@ export const MySideNav = () => {
         // console.log(selected);
         navigate(`/${selected}`);
       }}
-      style={{ backgroundColor: "#0f0f2e", height: "100vh" }}
+      style={{
+        backgroundColor: "#0f0f2e",
+      }}
     >
       <SideNav.Toggle />
       <SideNav.Nav defaultSelected="Dashboard">

@@ -6,12 +6,8 @@ export const BookCard = ({ data }) => {
       {data.map((book, index) => {
         return (
           <div key={index}>
-            <p>{book.volumeInfo.title}</p>
-            <img
-              src={book.volumeInfo.imageLinks.thumbnail}
-              alt=""
-              key={index}
-            />
+            <p>{book.title}</p>
+            <img src={book.image} alt="" key={index} />
           </div>
         );
       })}
