@@ -1,16 +1,10 @@
-import React from "react";
+import "./BookCard.css";
 
-export const BookCard = ({ data }) => {
+export const BookCard = ({ image, title }) => {
   return (
-    <div>
-      {data.map((book, index) => {
-        return (
-          <div key={index}>
-            <p>{book.title}</p>
-            <img src={book.image} alt="" key={index} />
-          </div>
-        );
-      })}
+    <div className="book-card">
+      <img src={image} alt={title} />
+      <p>{title}</p>
     </div>
   );
 };

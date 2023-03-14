@@ -10,6 +10,7 @@ import SideNav, {
 
 import "@trendmicro/react-sidenav/dist/react-sidenav.css";
 import { useNavigate } from "react-router";
+import "./SideNav.css";
 
 export const MySideNav = () => {
   const navigate = useNavigate();
@@ -20,9 +21,7 @@ export const MySideNav = () => {
         // console.log(selected);
         navigate(`/${selected}`);
       }}
-      style={{
-        backgroundColor: "#0f0f2e",
-      }}
+      className="side-nav"
     >
       <SideNav.Toggle />
       <SideNav.Nav defaultSelected="Dashboard">

@@ -1,0 +1,26 @@
+.Card {
+  display: flex;
+  justify-content: center;
+  /* border: 1px red solid; */
+  margin-right: 30px;
+  margin-top: 10px;
+}
+
+.Book {
+  display: flex;
+  height: calc(100vh - 40px);
+  flex-wrap: wrap;
+  margin-top: 40px;
+  margin-left: 64px;
+  padding-left: 15px;
+  padding-right: 15px;
+  /* border: 1px red solid; */
+}
+
+/* p {
+  display: block;
+} */
+
+p {
+  color: white;
+}
