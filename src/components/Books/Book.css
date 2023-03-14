@@ -4,6 +4,8 @@
   /* border: 1px red solid; */
   margin-right: 30px;
   margin-top: 10px;
+  width: 250px;
+  height: 400px;
 }
 
 .Book {
@@ -13,6 +15,7 @@
   margin-top: 40px;
   margin-left: 64px;
   padding-left: 15px;
+  justify-content: center;
   padding-right: 15px;
   /* border: 1px red solid; */
 }
