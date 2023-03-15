@@ -1,0 +1,15 @@
+.details {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.book-img img {
+  height: 600px;
+  width: 100%;
+}
+
+.book-img p {
+  font-size: larger;
+  font-weight: bolder;
+}

@@ -10,7 +10,13 @@ export const Book = ({ data }) => {
         data.map((book, index) => {
           return (
             <div key={index} className="Card">
-              <BookCard image={book.image} title={book.title} />
+              <BookCard
+                image={book.image}
+                title={book.title}
+                description={book.description}
+                author={book.author}
+                category={book.category}
+              />
             </div>
           );
         })
