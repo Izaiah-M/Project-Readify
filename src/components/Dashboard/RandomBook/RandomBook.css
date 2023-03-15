@@ -1,4 +1,26 @@
-.title {
+/* .title {
   color: white;
   font-weight: bolder;
+} */
+
+.randbook-container {
+  display: flex;
+  height: 150px;
+  /* border: 1px solid red; */
+  margin-bottom: 400px;
+  margin-left: 90px;
+  padding: 10px;
+  border-radius: 7px;
+  background-color: #040a14;
+  box-shadow: 2px 2px 7px #040a14;
+  width: 400px;
+  overflow: hidden;
+}
+
+.randbook-card {
+  margin-right: 10px;
+}
+
+.randbook-card img {
+  height: 100%;
 }
