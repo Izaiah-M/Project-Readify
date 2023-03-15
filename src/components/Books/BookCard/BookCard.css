@@ -1,8 +1,8 @@
-/* .book-card {
-  border-radius: 100px;
-  height: 100%;
-  width: 100%;
-} */
+.book-card:hover {
+  cursor: pointer;
+  transition: 0.6s;
+  transform: translateY(-10px);
+}
 
 img {
   border-radius: 10px;
@@ -12,4 +12,58 @@ img {
 
 .p {
   width: 100%;
+}
+
+/* CSS for the modal overlay */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.6s;
+}
+
+.modal {
+  background-color: #10144b;
+  padding: 20px;
+  border-radius: 5px;
+  max-width: 800px;
+  width: 90%;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+.modal img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.modal p {
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+.modal button {
+  display: block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.modal button:hover {
+  background-color: #555;
 }
