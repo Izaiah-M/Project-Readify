@@ -1,0 +1,7 @@
+.calender-card {
+  /* border: 1px red solid; */
+  height: 100%;
+  border-radius: 7px;
+  background-color: #040a14;
+  box-shadow: 2px 2px 7px #040a14;
+}

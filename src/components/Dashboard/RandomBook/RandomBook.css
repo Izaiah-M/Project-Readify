@@ -1,20 +1,14 @@
-/* .title {
-  color: white;
-  font-weight: bolder;
-} */
-
 .randbook-container {
   position: relative;
   display: flex;
   height: 150px;
-  /* border: 1px solid red; */
-  margin-bottom: 400px;
+  margin-bottom: 30px;
   margin-left: 90px;
   padding: 10px;
   border-radius: 7px;
   background-color: #040a14;
   box-shadow: 2px 2px 7px #040a14;
-  width: 400px;
+  width: 500px;
   overflow: hidden;
 }
 
@@ -24,4 +18,36 @@
 
 .randbook-card img {
   height: 100%;
+}
+
+.randbook-container button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #fff;
+  border: none;
+  padding: 0;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-size: 14px;
+  color: #040a14;
+  box-shadow: 2px 2px 7px #040a14;
+  transition: 0.5s;
+}
+
+.randbook-container button:hover {
+  background-color: #040a14;
+  color: #fff;
+}
+.randbook-container button:first-of-type {
+  left: 10px;
+}
+
+.randbook-container button:last-of-type {
+  right: 10px;
 }
