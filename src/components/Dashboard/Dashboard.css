@@ -1,3 +1,22 @@
 .dashboard {
+  display: flex;
+  flex-direction: row;
+}
+
+.dashboard-comp {
   margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.calender-container {
+  margin-left: 90px;
+  height: 400px;
+  width: 900px;
+}
+
+.infocenter-container {
+  margin-left: 20px;
+  width: 100%;
 }
