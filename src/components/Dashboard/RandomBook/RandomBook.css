@@ -4,6 +4,7 @@
 } */
 
 .randbook-container {
+  position: relative;
   display: flex;
   height: 150px;
   /* border: 1px solid red; */
