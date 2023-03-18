@@ -1,13 +1,20 @@
-import { useState } from "react";
 import ReactDatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
-import { CalendarCard } from "../Calendar/CalendarCard/CalendarCard";
+import { EventsDisplay } from "./EventsDisplay/EventsDisplay";
 
 import "./InfoCenter.css";
 
-export const InfoCenter = ({ handleSubmit, newEvent, setNewEvent }) => {
+export const InfoCenter = ({
+  handleSubmit,
+  newEvent,
+  setNewEvent,
+  allEvents,
+}) => {
   return (
     <div className="infocenter-card">
+      <div className="displaying">
+        <EventsDisplay events={allEvents} />
+      </div>
       <h2 style={{ color: "white" }}>Add New Event</h2>
       <div>
         <form onSubmit={handleSubmit}>

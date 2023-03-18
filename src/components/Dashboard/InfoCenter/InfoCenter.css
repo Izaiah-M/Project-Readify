@@ -5,3 +5,14 @@
   background-color: #040a14;
   box-shadow: 2px 2px 7px #040a14;
 }
+
+.displaying {
+  display: flex;
+  flex-direction: row;
+  /* justify-content: center; */
+  /* border: 1px red solid; */
+  margin-top: 5px;
+  height: 60%;
+  padding-top: 5px;
+  padding-left: 45px;
+}

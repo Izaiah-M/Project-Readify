@@ -62,7 +62,7 @@ export const Dashboard = () => {
           handleSubmit={handleAddEvent}
           newEvent={newEvent}
           setNewEvent={setNewEvent}
-          // ToDO: Takes in All events to showcase them for that specific day
+          allEvents={allEvents}
         />
       </div>
     </div>

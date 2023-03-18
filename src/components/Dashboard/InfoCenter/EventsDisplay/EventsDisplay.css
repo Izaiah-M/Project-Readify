@@ -1,0 +1,28 @@
+.img-container {
+  height: 55%;
+  /* border: 1px red solid; */
+  width: 250px;
+  margin-right: 10px;
+  background-color: rgb(14, 14, 20);
+  border-radius: 7px;
+}
+
+.img-container img {
+  height: 100%;
+  width: 100%;
+}
+
+.img-container p {
+  padding-top: 80px;
+  font-size: 12px;
+}
+
+.contents {
+  width: 100%;
+}
+
+.contents .pa {
+  margin-top: 15px;
+  padding-right: 50px;
+  /* border: 1px red solid; */
+}
