@@ -7,14 +7,35 @@ import { InfoCenter } from "./InfoCenter/InfoCenter";
 
 export const Dashboard = () => {
   const [books, setBooks] = useState([]);
+  const [newEvent, setNewEvent] = useState({
+    title: "",
+    start: "",
+    end: "",
+  });
+
+  const [allEvents, setAllEvents] = useState([]);
+
+  const handleAddEvent = (e) => {
+    e.preventDefault();
+
+    setAllEvents([...allEvents, newEvent]);
+
+    setNewEvent({
+      title: "",
+      start: "",
+      end: "",
+    });
+
+    console.log(`Event: ${newEvent.title} Successfully added`);
+  };
 
   const getBookSuggestions = async () => {
     const results = await BookRequests.getRandomBook();
 
-    // Fix the problem
-    console.log("getBookSuggestions called");
+    // TODO: Fix the problem
+    // console.log("getBookSuggestions called");
 
-    console.log(results);
+    // console.log(results);
     setBooks(results);
 
     return results;
@@ -33,11 +54,15 @@ export const Dashboard = () => {
           <RandomBook books={books} />
         </header>
         <div className="calender-container">
-          <Calendar />
+          <Calendar events={allEvents} />
         </div>
       </div>
       <div className="infocenter-container">
-        <InfoCenter />
+        <InfoCenter
+          handleSubmit={handleAddEvent}
+          newEvent={newEvent}
+          setNewEvent={setNewEvent}
+        />
       </div>
     </div>
   );
