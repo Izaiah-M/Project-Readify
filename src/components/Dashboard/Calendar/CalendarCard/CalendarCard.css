@@ -270,6 +270,7 @@ button.rbc-input::-moz-focus-inner {
   margin-left: 10px;
 }
 
+/* For tje day event */
 .rbc-event,
 .rbc-day-slot .rbc-background-event {
   border: none;
@@ -280,7 +281,7 @@ button.rbc-input::-moz-focus-inner {
   margin: 0;
   padding: 2px 5px;
   background-color: #e6e6e6;
-  border-radius: 5px;
+  margin-bottom: 1px;
   color: rgb(1, 1, 3);
   cursor: pointer;
   width: 100%;
@@ -347,18 +348,16 @@ button.rbc-input::-moz-focus-inner {
   background-color: rgba(0, 0, 0, 0.1);
 }
 
+/* For show more btn */
 .rbc-show-more {
-  background-color: rgba(255, 255, 255, 0.3);
+  background-color: rgb(1, 1, 3);
   z-index: 4;
   font-weight: bold;
   font-size: 85%;
   height: auto;
   line-height: normal;
-  color: #3174ad;
-}
-.rbc-show-more:hover,
-.rbc-show-more:focus {
-  color: #265985;
+  color: white;
+  border-radius: none;
 }
 
 /* For the outer border */
@@ -417,6 +416,7 @@ button.rbc-input::-moz-focus-inner {
   border-top: 1px solid rgb(1, 1, 3);
 }
 
+/* For the date cell */
 .rbc-date-cell {
   -webkit-box-flex: 1;
   -ms-flex: 1 1 0px;
@@ -424,6 +424,7 @@ button.rbc-input::-moz-focus-inner {
   min-width: 0;
   padding-right: 5px;
   text-align: right;
+  /* border: 1px red solid; */
 }
 .rbc-date-cell.rbc-now {
   font-weight: bold;
@@ -435,6 +436,7 @@ button.rbc-input::-moz-focus-inner {
   text-decoration: none;
 }
 
+/* For the whole date row */
 .rbc-row-bg {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -447,12 +449,15 @@ button.rbc-input::-moz-focus-inner {
   -ms-flex: 1 0 0px;
   flex: 1 0 0;
   overflow: hidden;
+  /* border: 1px solid red; */
 }
 
+/* For the individual cells */
 .rbc-day-bg {
   -webkit-box-flex: 1;
   -ms-flex: 1 0 0%;
   flex: 1 0 0%;
+  /* border: 1px solid red; */
 }
 
 /* For the calendar lines vertical */
