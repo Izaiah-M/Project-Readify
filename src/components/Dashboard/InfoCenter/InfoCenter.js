@@ -9,11 +9,12 @@ export const InfoCenter = ({
   newEvent,
   setNewEvent,
   allEvents,
+  selectedDate,
 }) => {
   return (
     <div className="infocenter-card">
       <div className="displaying">
-        <EventsDisplay events={allEvents} />
+        <EventsDisplay events={allEvents} selectedDate={selectedDate} />
       </div>
       <h2 style={{ color: "white" }}>Add New Event</h2>
       <div>

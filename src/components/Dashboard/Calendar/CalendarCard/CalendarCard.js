@@ -17,7 +17,7 @@ const localizer = dateFnsLocalizer({
   },
 });
 
-export const CalendarCard = ({ events }) => {
+export const CalendarCard = ({ events, onSelectEvent }) => {
   return (
     <div className="calendar-card">
       <Calendar
@@ -27,6 +27,14 @@ export const CalendarCard = ({ events }) => {
         endAccessor="end"
         style={{ height: "100%" }}
         className="calendarr"
+        views={{
+          month: true,
+          day: false,
+          week: false,
+          agenda: false,
+        }}
+        defaultView="month"
+        onSelectEvent={onSelectEvent}
       />
     </div>
   );

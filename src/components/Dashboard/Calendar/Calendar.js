@@ -2,10 +2,10 @@
 import { CalendarCard } from "./CalendarCard/CalendarCard";
 import "./Calender.css";
 
-export const Calendar = ({ events }) => {
+export const Calendar = ({ events, onSelectEvent }) => {
   return (
     <div className="calender-card">
-      <CalendarCard events={events} />
+      <CalendarCard events={events} onSelectEvent={onSelectEvent} />
     </div>
   );
 };

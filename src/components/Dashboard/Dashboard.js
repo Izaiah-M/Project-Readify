@@ -9,11 +9,21 @@ export const Dashboard = () => {
   const [books, setBooks] = useState([]);
   const [newEvent, setNewEvent] = useState({
     title: "",
+    book: {
+      title: "",
+      description: "",
+      img: "",
+    },
     start: "",
     end: "",
   });
+  const [selectedDate, setSelectedDate] = useState(null);
 
   const [allEvents, setAllEvents] = useState([]);
+
+  const handleSelectEvent = (event) => {
+    setSelectedDate(event.start);
+  };
 
   const handleAddEvent = (e) => {
     e.preventDefault();
@@ -22,6 +32,11 @@ export const Dashboard = () => {
 
     setNewEvent({
       title: "",
+      book: {
+        title: "",
+        description: "",
+        img: "",
+      },
       start: "",
       end: "",
     });
@@ -54,7 +69,7 @@ export const Dashboard = () => {
           <RandomBook books={books} />
         </header>
         <div className="calender-container">
-          <Calendar events={allEvents} />
+          <Calendar events={allEvents} onSelectEvent={handleSelectEvent} />
         </div>
       </div>
       <div className="infocenter-container">
@@ -63,6 +78,7 @@ export const Dashboard = () => {
           newEvent={newEvent}
           setNewEvent={setNewEvent}
           allEvents={allEvents}
+          selectedDate={selectedDate}
         />
       </div>
     </div>
