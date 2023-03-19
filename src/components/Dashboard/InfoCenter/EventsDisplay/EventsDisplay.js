@@ -14,10 +14,14 @@ export const EventsDisplay = ({ events, selectedDate }) => {
   return (
     <div className="contents">
       <div className="img-container">
-        {filteredEvents.length ? (
-          filteredEvents.map((event) => (
-            <img key={event.id} src={event.book.img} alt="" />
-          ))
+        {filteredEvents.books ? (
+          filteredEvents.map((event) =>
+            event.book.img ? (
+              <img key={event.id} src={event.book.img} alt="" />
+            ) : (
+              <p>No book Image to display</p>
+            )
+          )
         ) : (
           <p>
             No books scheduled for {selectedDate && selectedDate.toDateString()}
@@ -26,19 +30,20 @@ export const EventsDisplay = ({ events, selectedDate }) => {
       </div>
       <div className="event-container">
         {filteredEvents.length ? (
-          filteredEvents.map((event) => <p key={event.id}>{event.title}</p>)
+          filteredEvents.map((event) => (
+            <ul>
+              <li key={event.id} className="event">
+                {event.title}
+              </li>
+            </ul>
+          ))
         ) : (
-          <p>
-            No events to display for today
+          <p className="no-events">
+            No events scheduled for{" "}
             {selectedDate && selectedDate.toDateString()}
           </p>
         )}
       </div>
-      {!filteredEvents.length && (
-        <p>
-          No events scheduled for {selectedDate && selectedDate.toDateString()}
-        </p>
-      )}
     </div>
   );
 };

@@ -28,21 +28,27 @@ export const InfoCenter = ({
               setNewEvent({ ...newEvent, title: target.value })
             }
           />
-          <ReactDatePicker
-            required
-            value={newEvent.start}
-            placeholderText="Start Date"
-            selected={newEvent.start}
-            onChange={(start) => setNewEvent({ ...newEvent, start })}
-          />
 
-          <ReactDatePicker
-            value={newEvent.end}
-            placeholderText="End Date"
-            selected={newEvent.end}
-            onChange={(end) => setNewEvent({ ...newEvent, end })}
-          />
-          <input type="submit" value="Add Event" />
+          <div className="selectday">
+            <ReactDatePicker
+              className="start-date"
+              required
+              value={newEvent.start}
+              placeholderText="Start Date"
+              selected={newEvent.start}
+              onChange={(start) => setNewEvent({ ...newEvent, start })}
+            />
+
+            <ReactDatePicker
+              className="end-date"
+              required
+              value={newEvent.end}
+              placeholderText="End Date"
+              selected={newEvent.end}
+              onChange={(end) => setNewEvent({ ...newEvent, end })}
+            />
+          </div>
+          <input type="submit" value="Add Event" className="submit-btn" />
         </form>
       </div>
     </div>

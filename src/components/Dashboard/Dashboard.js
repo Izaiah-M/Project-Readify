@@ -17,7 +17,7 @@ export const Dashboard = () => {
     start: "",
     end: "",
   });
-  const [selectedDate, setSelectedDate] = useState(null);
+  const [selectedDate, setSelectedDate] = useState(new Date());
 
   const [allEvents, setAllEvents] = useState([]);
 
