@@ -50,3 +50,29 @@
   font-size: 12px;
   font-weight: bolder;
 }
+
+.task {
+  position: relative; /* Add this to make the close button position relative to this element */
+  display: flex;
+  align-content: center;
+  flex-direction: row;
+  width: 100%;
+  /* border: 1px red solid; */
+  cursor: pointer;
+}
+
+.close-btn {
+  position: absolute; /* Add this to position the close button within the task div */
+  top: 0;
+  right: 0;
+  margin-top: 19px;
+  margin-right: 10px;
+  color: white;
+  font-weight: bolder;
+  display: none;
+}
+
+.task:hover .close-btn {
+  display: block;
+  cursor: pointer;
+}

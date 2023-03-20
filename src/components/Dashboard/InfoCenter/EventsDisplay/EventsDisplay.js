@@ -1,7 +1,8 @@
 import "./EventsDisplay.css";
 // import format from "date-fns/format";
+import { BsX } from "react-icons/bs";
 
-export const EventsDisplay = ({ events, selectedDate }) => {
+export const EventsDisplay = ({ events, selectedDate, onRemoveEvent }) => {
   const filteredEvents = selectedDate
     ? events.filter(
         (event) =>
@@ -17,7 +18,7 @@ export const EventsDisplay = ({ events, selectedDate }) => {
         {filteredEvents.books ? (
           filteredEvents.map((event) =>
             event.book.img ? (
-              <img key={event.id} src={event.book.img} alt="" />
+              <img key={event.id} src={event.book.img} alt="book img" />
             ) : (
               <p>No book Image to display</p>
             )
@@ -31,11 +32,18 @@ export const EventsDisplay = ({ events, selectedDate }) => {
       <div className="event-container">
         {filteredEvents.length ? (
           filteredEvents.map((event) => (
-            <ul>
-              <li key={event.id} className="event">
-                {event.title}
-              </li>
-            </ul>
+            <div key={event.id} className="task">
+              <ul>
+                <li className="event">{event.title}</li>
+              </ul>
+              <BsX
+                className="close-btn"
+                onClick={(e) => {
+                  e.preventDefault();
+                  onRemoveEvent(event.id);
+                }}
+              />
+            </div>
           ))
         ) : (
           <p className="no-events">

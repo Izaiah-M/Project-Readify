@@ -5,6 +5,8 @@ import BookRequests from "../../utils/Config";
 import { Calendar } from "./Calendar/Calendar";
 import { InfoCenter } from "./InfoCenter/InfoCenter";
 
+import { v4 as uuidv4 } from "uuid";
+
 export const Dashboard = () => {
   const [books, setBooks] = useState([]);
   const [newEvent, setNewEvent] = useState({
@@ -28,7 +30,19 @@ export const Dashboard = () => {
   const handleAddEvent = (e) => {
     e.preventDefault();
 
-    setAllEvents([...allEvents, newEvent]);
+    const newEventWithId = {
+      id: uuidv4(),
+      title: newEvent.title,
+      book: {
+        title: newEvent.book.title,
+        description: newEvent.book.description,
+        img: newEvent.book.img,
+      },
+      start: newEvent.start,
+      end: newEvent.end,
+    };
+
+    setAllEvents([...allEvents, newEventWithId]);
 
     setNewEvent({
       title: "",
@@ -41,7 +55,14 @@ export const Dashboard = () => {
       end: "",
     });
 
-    console.log(`Event: ${newEvent.title} Successfully added`);
+    console.log(
+      `Event: ${newEventWithId.title} with id:${newEventWithId.id} Successfully added`
+    );
+  };
+
+  const handleRemoveEvent = (eventId) => {
+    setAllEvents(allEvents.filter((event) => event.id !== eventId));
+    console.log("Clicked");
   };
 
   const getBookSuggestions = async () => {
@@ -79,6 +100,7 @@ export const Dashboard = () => {
           setNewEvent={setNewEvent}
           allEvents={allEvents}
           selectedDate={selectedDate}
+          handleRemoveEvent={handleRemoveEvent}
         />
       </div>
     </div>
