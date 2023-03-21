@@ -21,8 +21,22 @@ export const Dashboard = () => {
   });
   const [selectedDate, setSelectedDate] = useState(new Date());
 
+  const gettingLocalStorage = () => {
+    const retrievedEventsStr = localStorage.getItem("events");
+    const retrievedEvents = JSON.parse(retrievedEventsStr, (key, value) => {
+      if (key === "start" || key === "end") {
+        return new Date(value);
+      } else {
+        return value;
+      }
+    });
+    return retrievedEvents;
+  };
+
+  const currentEvents = gettingLocalStorage();
+
   // const [allEvents, setAllEvents] = useState([]);
-  const [allEvents, setAllEvents] = useState([]);
+  const [allEvents, setAllEvents] = useState(currentEvents || []);
 
   const handleSelectEvent = (event) => {
     setSelectedDate(event.start);
@@ -62,8 +76,9 @@ export const Dashboard = () => {
   };
 
   const handleRemoveEvent = (eventId) => {
-    setAllEvents(allEvents.filter((event) => event.id !== eventId));
-    console.log("Clicked");
+    const updatedEvents = allEvents.filter((event) => event.id !== eventId);
+    setAllEvents(updatedEvents);
+    localStorage.setItem("events", JSON.stringify(updatedEvents));
   };
 
   const getBookSuggestions = async () => {
@@ -82,7 +97,6 @@ export const Dashboard = () => {
     if (books.length === 0) {
       getBookSuggestions();
     }
-    gettingLocalStorage();
   }, [books]);
 
   // To handle adding items to our local storage.
@@ -93,18 +107,6 @@ export const Dashboard = () => {
   }, [allEvents]);
 
   // Making sure everything is returned the right way
-  const gettingLocalStorage = () => {
-    const retrievedEventsStr = localStorage.getItem("events");
-    const retrievedEvents = JSON.parse(retrievedEventsStr, (key, value) => {
-      if (key === "start" || key === "end") {
-        return new Date(value);
-      } else {
-        return value;
-      }
-    });
-
-    setAllEvents(retrievedEvents);
-  };
 
   return (
     <div className="dashboard">
