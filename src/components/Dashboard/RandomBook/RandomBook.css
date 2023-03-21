@@ -1,3 +1,4 @@
+
 .randbook-container {
   position: relative;
   display: flex;
@@ -20,7 +21,7 @@
   height: 100%;
 }
 
-.randbook-container button {
+.randbook-arrow {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -30,7 +31,7 @@
   width: 20px;
   height: 20px;
   border-radius: 50%;
-  display: flex;
+  display: none;
   justify-content: center;
   align-items: center;
   cursor: pointer;
@@ -40,14 +41,20 @@
   transition: 0.5s;
 }
 
-.randbook-container button:hover {
+.randbook-arrow:hover {
   background-color: #040a14;
   color: #fff;
 }
-.randbook-container button:first-of-type {
+
+.randbook-arrow-left {
   left: 10px;
 }
 
-.randbook-container button:last-of-type {
+.randbook-arrow-right {
   right: 10px;
 }
+
+.randbook-container:hover .randbook-arrow {
+  display: flex;
+}
+

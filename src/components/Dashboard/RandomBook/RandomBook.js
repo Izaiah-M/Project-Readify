@@ -1,11 +1,11 @@
+
 import { useState } from "react";
-import { FaArrowRight } from "react-icons/fa";
+import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 import "./RandomBook.css";
 
 export const RandomBook = ({ books }) => {
   const booksPerPage = 5;
   const [currentPage, setCurrentPage] = useState(1);
-
   const totalPages = Math.ceil(books.length / booksPerPage);
   const startIndex = (currentPage - 1) * booksPerPage;
   const endIndex = startIndex + booksPerPage;
@@ -21,6 +21,11 @@ export const RandomBook = ({ books }) => {
   return (
     <>
       <div className="randbook-container">
+        {currentPage > 1 && (
+          <button className="randbook-arrow randbook-arrow-left" onClick={handlePrevPage}>
+            <FaArrowLeft />
+          </button>
+        )}
         {books.slice(startIndex, endIndex).map((book, index) => {
           return (
             <div key={index} className="randbook-card">
@@ -28,13 +33,8 @@ export const RandomBook = ({ books }) => {
             </div>
           );
         })}
-        {currentPage > 1 && (
-          <button onClick={handlePrevPage}>
-            <FaArrowRight />
-          </button>
-        )}
         {currentPage < totalPages && (
-          <button onClick={handleNextPage}>
+          <button className="randbook-arrow randbook-arrow-right" onClick={handleNextPage}>
             <FaArrowRight />
           </button>
         )}
@@ -42,3 +42,4 @@ export const RandomBook = ({ books }) => {
     </>
   );
 };
+
