@@ -7,7 +7,7 @@ import { MySideNav } from "./components/SideNav/SideNav";
 
 function App() {
   const ROUTES = {
-    DASHBOARD: "/dashboard",
+    DASHBOARD: "/",
     BOOKSEARCH: "/book-search",
     UPCOMING: "/upcoming",
   };
