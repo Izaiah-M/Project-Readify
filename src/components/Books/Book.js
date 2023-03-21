@@ -21,7 +21,7 @@ export const Book = ({ data }) => {
           );
         })
       ) : (
-        <p>:( Oops something went wrong</p>
+        <p>:{"("} Oops something went wrong</p>
       )}
     </div>
   );

@@ -2,6 +2,8 @@ import { useState } from "react";
 import { BookDetails } from "../BookDetails/BookDetails";
 import "./BookCard.css";
 
+import { BsXLg } from "react-icons/bs";
+
 export const BookCard = ({ image, title, description, author, category }) => {
   const [selectedBook, setSelectedBook] = useState(null);
 
@@ -13,6 +15,8 @@ export const BookCard = ({ image, title, description, author, category }) => {
     setSelectedBook(null);
   };
 
+  const handleAddSchedule = () => {};
+
   return (
     <>
       <div className="book-card" onClick={handleBookClick}>
@@ -22,6 +26,7 @@ export const BookCard = ({ image, title, description, author, category }) => {
       {selectedBook && (
         <div className="modal-overlay" onClick={handleClose}>
           <div className="modal">
+            <BsXLg onClick={handleClose} className="close" />
             <BookDetails
               book={selectedBook}
               image={image}
@@ -30,8 +35,7 @@ export const BookCard = ({ image, title, description, author, category }) => {
               author={author}
               category={category}
             />
-            <button onClick={handleClose}>Close</button>
-            <button>Add to schedule</button>
+            <button className="add-schedule">Add to schedule</button>
           </div>
         </div>
       )}
