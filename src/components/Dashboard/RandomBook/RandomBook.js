@@ -20,7 +20,6 @@ export const RandomBook = ({ books }) => {
 
   return (
     <>
-      <p>Reading Ideas</p>
       <div className="randbook-container">
         {currentPage > 1 && (
           <button className="randbook-arrow randbook-arrow-left" onClick={handlePrevPage}>
