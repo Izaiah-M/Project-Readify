@@ -20,7 +20,6 @@ export const RandomBook = ({ books }) => {
 
   return (
     <>
-      <p>Reading Ideas</p>
       <div className="randbook-container">
         {books.slice(startIndex, endIndex).map((book, index) => {
           return (
