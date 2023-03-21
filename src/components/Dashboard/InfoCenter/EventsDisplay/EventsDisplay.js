@@ -12,6 +12,8 @@ export const EventsDisplay = ({ events, selectedDate, onRemoveEvent }) => {
       )
     : [];
 
+  // console.log(events);
+
   return (
     <div className="contents">
       <div className="img-container">

@@ -21,6 +21,7 @@ export const Dashboard = () => {
   });
   const [selectedDate, setSelectedDate] = useState(new Date());
 
+  // const [allEvents, setAllEvents] = useState([]);
   const [allEvents, setAllEvents] = useState([]);
 
   const handleSelectEvent = (event) => {
@@ -81,7 +82,29 @@ export const Dashboard = () => {
     if (books.length === 0) {
       getBookSuggestions();
     }
+    gettingLocalStorage();
   }, [books]);
+
+  // To handle adding items to our local storage.
+  useEffect(() => {
+    if (allEvents.length > 0) {
+      localStorage.setItem("events", JSON.stringify(allEvents));
+    }
+  }, [allEvents]);
+
+  // Making sure everything is returned the right way
+  const gettingLocalStorage = () => {
+    const retrievedEventsStr = localStorage.getItem("events");
+    const retrievedEvents = JSON.parse(retrievedEventsStr, (key, value) => {
+      if (key === "start" || key === "end") {
+        return new Date(value);
+      } else {
+        return value;
+      }
+    });
+
+    setAllEvents(retrievedEvents);
+  };
 
   return (
     <div className="dashboard">
