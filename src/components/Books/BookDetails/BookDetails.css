@@ -69,9 +69,43 @@
 .scheduleForm {
   width: 100%;
   margin-top: 30px;
-  /* border: 1px solid red; */
+  font-weight: bolder;
+  display: flex;
+  flex-direction: row;
 }
 
 .cancel {
   margin-top: 20px;
+  margin-right: 130px;
+  width: 10px;
+  border: 1px solid red; 
+}
+
+
+/* Media Queries */
+
+@media (max-width: 768px) {
+  .details {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .grid-container {
+    width: 100%;
+    margin-right: 0;
+  }
+  
+  .grid-container-img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .grid-details {
+    margin-top: 20px;
+  }
+
+  .cancel{
+    margin-top: 5px;
+    align-items: center;
+  }
 }
