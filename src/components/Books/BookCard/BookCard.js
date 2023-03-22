@@ -6,7 +6,16 @@ import "react-datepicker/dist/react-datepicker.css";
 
 import { BsXLg } from "react-icons/bs";
 
-export const BookCard = ({ image, title, description, author, category }) => {
+export const BookCard = ({
+  image,
+  title,
+  description,
+  author,
+  category,
+  handleSubmit,
+  newEvent,
+  setNewEvent,
+}) => {
   const [selectedBook, setSelectedBook] = useState(null);
   const [clickSchedule, setClickSchedule] = useState(false);
 
@@ -52,20 +61,36 @@ export const BookCard = ({ image, title, description, author, category }) => {
             <div className="scheduleForm">
               {clickSchedule && (
                 <div>
-                  <form>
-                    <input type="text" required placeholder="Add Title" />
+                  <form onSubmit={handleSubmit}>
+                    <input
+                      type="text"
+                      required
+                      placeholder="Add Title"
+                      value={newEvent.title}
+                      onChange={({ target }) =>
+                        setNewEvent({ ...newEvent, title: target.value })
+                      }
+                    />
 
                     <div className="selectday">
                       <ReactDatePicker
                         className="start-date"
                         required
                         placeholderText="Start Date"
+                        value={newEvent.start}
+                        selected={newEvent.start}
+                        onChange={(start) =>
+                          setNewEvent({ ...newEvent, start })
+                        }
                       />
 
                       <ReactDatePicker
                         className="end-date"
                         required
+                        value={newEvent.end}
                         placeholderText="End Date"
+                        selected={newEvent.end}
+                        onChange={(end) => setNewEvent({ ...newEvent, end })}
                       />
                     </div>
                     <input
