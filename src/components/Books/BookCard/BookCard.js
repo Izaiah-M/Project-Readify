@@ -54,65 +54,13 @@ export const BookCard = ({
               description={description}
               author={author}
               category={category}
+              handleAddSchedule={handleAddSchedule}
+              handleCancel={handleCancel}
+              handleSubmit={handleSubmit}
+              newEvent={newEvent}
+              setNewEvent={setNewEvent}
+              clickSchedule={clickSchedule}
             />
-            <button className="add-schedule" onClick={handleAddSchedule}>
-              Add to schedule
-            </button>
-            <div className="scheduleForm">
-              {clickSchedule && (
-                <div>
-                  <form onSubmit={handleSubmit}>
-                    <input
-                      type="text"
-                      required
-                      placeholder="Add Title"
-                      value={newEvent.title}
-                      onChange={({ target }) =>
-                        setNewEvent({
-                          ...newEvent,
-                          title: target.value,
-                          book: {
-                            title: { title },
-                            description: { description },
-                            img: { image },
-                          },
-                        })
-                      }
-                    />
-
-                    <div className="selectday">
-                      <ReactDatePicker
-                        className="start-date"
-                        required
-                        placeholderText="Start Date"
-                        value={newEvent.start}
-                        selected={newEvent.start}
-                        onChange={(start) =>
-                          setNewEvent({ ...newEvent, start })
-                        }
-                      />
-
-                      <ReactDatePicker
-                        className="end-date"
-                        required
-                        value={newEvent.end}
-                        placeholderText="End Date"
-                        selected={newEvent.end}
-                        onChange={(end) => setNewEvent({ ...newEvent, end })}
-                      />
-                    </div>
-                    <input
-                      type="submit"
-                      value="Add Event"
-                      className="submit-btn"
-                    />
-                  </form>
-                  <button className="add-schedule" onClick={handleCancel}>
-                    Cancel
-                  </button>
-                </div>
-              )}
-            </div>
           </div>
         </div>
       )}
