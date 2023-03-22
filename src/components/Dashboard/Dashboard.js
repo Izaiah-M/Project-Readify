@@ -16,9 +16,9 @@ export const Dashboard = ({
   return (
     <div className="dashboard">
       <div className="dashboard-comp">
-        <header>
+        <div className="rand-book">
           <RandomBook books={books} />
-        </header>
+        </div>
         <div className="calender-container">
           <Calendar events={allEvents} onSelectEvent={onSelectEvent} />
         </div>

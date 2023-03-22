@@ -14,12 +14,14 @@ export const InfoCenter = ({
 }) => {
   return (
     <div className="infocenter-card">
-      <div className="displaying">
-        <EventsDisplay
-          events={allEvents}
-          selectedDate={selectedDate}
-          onRemoveEvent={handleRemoveEvent}
-        />
+      <div className="display-container">
+        <div className="displaying">
+          <EventsDisplay
+            events={allEvents}
+            selectedDate={selectedDate}
+            onRemoveEvent={handleRemoveEvent}
+          />
+        </div>
       </div>
       <h2 style={{ color: "white" }}>Add New Event</h2>
       <div>

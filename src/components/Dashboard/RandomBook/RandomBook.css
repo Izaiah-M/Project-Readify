@@ -1,4 +1,3 @@
-
 .randbook-container {
   position: relative;
   display: flex;
@@ -58,3 +57,8 @@
   display: flex;
 }
 
+/* @media only screen and (max-width: 1020px) {
+  .randbook-container {
+    width: 300px;
+  }
+} */

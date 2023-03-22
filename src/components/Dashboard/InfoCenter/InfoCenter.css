@@ -1,5 +1,5 @@
 .infocenter-card {
-  /* border: 1px red solid; */
+  border: 1px red solid;
   height: 100%;
   border-radius: 10px;
   background-color: #040a14;
@@ -9,7 +9,7 @@
 .displaying {
   display: flex;
   flex-direction: row;
-  /* border: 1px red solid; */
+  border: 1px red solid;
   margin-top: 5px;
   height: 60%;
   padding-top: 5px;
@@ -41,4 +41,21 @@
   /* border: 1px red solid; */
   display: flex;
   flex-direction: row;
+}
+
+@media only screen and (max-width: 1020px) {
+  .infocenter-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    margin-left: 235px;
+  }
+
+  /* .displaying {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+  } */
 }
