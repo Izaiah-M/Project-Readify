@@ -5,7 +5,7 @@ import BookRequests from "../../utils/Config";
 import { Book } from "./Book";
 import "./Search.css";
 
-export const Search = () => {
+export const Search = ({ handleBookSubmit, newEvent, setNewEvent }) => {
   const [data, setData] = useState([]);
   const [searchParams, setSearchParams] = useState("");
 
@@ -26,7 +26,7 @@ export const Search = () => {
     setSearchParams(target.value);
   };
 
-  const handleSubmit = (e) => {
+  const handleSearchSubmit = (e) => {
     e.preventDefault();
 
     bookData(searchParams);
@@ -38,9 +38,14 @@ export const Search = () => {
       <SearchInput
         searchParams={searchParams}
         setSearchParams={searchParamsSet}
-        handleSubmit={handleSubmit}
+        handleSubmit={handleSearchSubmit}
       />
-      <Book data={data} />
+      <Book
+        data={data}
+        handleSubmit={handleBookSubmit}
+        newEvent={newEvent}
+        setNewEvent={setNewEvent}
+      />
     </div>
   );
 };
