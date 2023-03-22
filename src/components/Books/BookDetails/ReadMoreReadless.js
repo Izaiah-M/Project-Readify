@@ -3,7 +3,7 @@ import "./BookDetails.css";
 import "./BookDetails.js";
 
 const ReadMoreReadless = ({ limit, text }) => {
-  const [showFullText, setShowFullText] = useState(true);
+  const [showFullText, setShowFullText] = useState(false);
 
   const toggleText = () => {
     setShowFullText(!showFullText);
@@ -27,4 +27,3 @@ const ReadMoreReadless = ({ limit, text }) => {
 };
 
 export default ReadMoreReadless;
-
