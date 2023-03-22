@@ -17,6 +17,8 @@ const localizer = dateFnsLocalizer({
   },
 });
 
+// TODO: use onSelectSlot
+
 export const CalendarCard = ({ events, onSelectEvent }) => {
   return (
     <div className="calendar-card">
