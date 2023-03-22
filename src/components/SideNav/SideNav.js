@@ -24,7 +24,7 @@ export const MySideNav = () => {
     >
       <SideNav.Toggle />
       <SideNav.Nav defaultSelected="Dashboard">
-        <NavItem eventKey="dashboard">
+        <NavItem eventKey="">
           <NavIcon>
             <BsHouseDoorFill style={{ fontSize: "1.5em" }} />
           </NavIcon>

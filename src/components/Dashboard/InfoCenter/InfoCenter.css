@@ -1,0 +1,44 @@
+.infocenter-card {
+  /* border: 1px red solid; */
+  height: 100%;
+  border-radius: 10px;
+  background-color: #040a14;
+  box-shadow: 2px 2px 7px #040a14;
+}
+
+.displaying {
+  display: flex;
+  flex-direction: row;
+  /* border: 1px red solid; */
+  margin-top: 5px;
+  height: 60%;
+  padding-top: 5px;
+  padding-left: 45px;
+}
+
+.submit-btn {
+  margin-top: 10px;
+  margin-right: 170px;
+  width: 100px;
+  height: 40px;
+  font-weight: bolder;
+}
+
+.end-date {
+  margin-top: 3px;
+  width: 50%;
+  /* margin-right: 70px; */
+  /* border: 1px red solid; */
+}
+
+.start-date {
+  margin-top: 3px;
+  /* margin-right: 30px; */
+  width: 50%;
+}
+
+.selectday {
+  /* border: 1px red solid; */
+  display: flex;
+  flex-direction: row;
+}
