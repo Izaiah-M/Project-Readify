@@ -49,16 +49,16 @@ export const BookDetails = ({
                   <input
                     type="text"
                     required
-                    placeholder="Add Title"
+                    placeholder={`Read ${title}`}
                     value={newEvent.title}
                     onChange={({ target }) =>
                       setNewEvent({
                         ...newEvent,
                         title: target.value,
                         book: {
-                          title: { title },
-                          description: { description },
-                          img: { image },
+                          title: title,
+                          description: description,
+                          img: image,
                         },
                       })
                     }
