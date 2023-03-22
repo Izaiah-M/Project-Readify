@@ -21,15 +21,15 @@ export const BookDetails = ({
 
   return (
     <div className="details">
-      <div class="grid-container">
-        <div class="grid-image">
+      <div className="grid-container">
+        <div className="grid-image">
           <img src={image} alt={title} />
           <p>{title}</p>
         </div>
       </div>
 
-      <div class="grid-container">
-        <div class="grid-details">
+      <div className="grid-container">
+        <div className="grid-details">
           <div className="description">
             <ReadMoreReadless limit={150} text={description} />
           </div>
@@ -49,16 +49,16 @@ export const BookDetails = ({
                   <input
                     type="text"
                     required
-                    placeholder="Add Title"
+                    placeholder={`Read ${title}`}
                     value={newEvent.title}
                     onChange={({ target }) =>
                       setNewEvent({
                         ...newEvent,
                         title: target.value,
                         book: {
-                          title: { title },
-                          description: { description },
-                          img: { image },
+                          title: title,
+                          description: description,
+                          img: image,
                         },
                       })
                     }

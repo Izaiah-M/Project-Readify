@@ -13,23 +13,25 @@ export const EventsDisplay = ({ events, selectedDate, onRemoveEvent }) => {
     : [];
 
   // console.log(events);
+  const books = filteredEvents.filter((event) => event.book.title);
 
   return (
     <div className="contents">
       <div className="img-container">
-        {filteredEvents.books ? (
-          filteredEvents.map((event) =>
-            event.book.img ? (
-              <img key={event.id} src={event.book.img} alt="book img" />
-            ) : (
-              <p>No book Image to display</p>
+        {books.length > 0 && selectedDate
+          ? books.map((event) =>
+              event.book.img ? (
+                <img key={event.id} src={event.book.img} alt="book img" />
+              ) : (
+                <p>No image for Book</p>
+              )
             )
-          )
-        ) : (
-          <p>
-            No books scheduled for {selectedDate && selectedDate.toDateString()}
-          </p>
-        )}
+          : filteredEvents.length > 0 && (
+              <p>
+                No books Scheduled for{" "}
+                {selectedDate && selectedDate.toDateString()}
+              </p>
+            )}
       </div>
       <div className="event-container">
         {filteredEvents.length ? (
