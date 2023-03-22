@@ -28,6 +28,7 @@ img {
 
 /* CSS for the modal overlay */
 .modal-overlay {
+  /* border: 1px solid red; */
   position: fixed;
   top: 0;
   left: 0;
@@ -42,6 +43,9 @@ img {
 }
 
 .modal {
+  /* border: 1px red solid; */
+  /* display: flex;
+  flex-direction: column; */
   background-color: #10144b;
   padding: 20px;
   border-radius: 5px;
@@ -54,7 +58,7 @@ img {
 
 .modal img {
   max-width: 100%;
-  height: auto;
+  height: 100%;
   margin-bottom: 10px;
 }
 
@@ -80,4 +84,54 @@ img {
 
 .modal button:hover {
   background-color: #555;
+}
+
+/* Responsive styles */
+@media only screen and (max-width: 767px) {
+  .close {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+  }
+
+  .modal {
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+    width: 100%;
+    max-height: 100vh;
+    overflow-y: scroll;
+  }
+
+  .modal button {
+    width: 100%;
+    margin-top: 10px;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1199px) {
+  .close {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+  }
+
+  .modal {
+    padding: 10px;
+    width: 90%;
+    max-height: 80vh;
+    overflow-y: scroll;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .close {
+    margin-left: 700px;
+    margin-bottom: 20px;
+  }
+
+  .modal {
+    width: 70%;
+    max-height: 90vh;
+  }
 }

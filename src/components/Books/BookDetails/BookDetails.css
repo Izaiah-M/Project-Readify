@@ -1,79 +1,40 @@
-/* .details {
-  display: block;
-}
-
-.book-img img {
-  height: 175px;
-  width: 30%;
-  position: relative;
-  right: 10px;
-}
-
-.book-img p {
-  font-size: larger;
-  font-weight: bolder;
-  color: yellow;
-  position: relative;
-  right: 10px;
-}
-
-.description {
-  
-  display: block;
-}
-
-.read-more-read-less {
-  background-color: #fff;
-  box-shadow: 0 0 1rem rgba(0,0,0,.1);
-  padding: 2rem;
-  border-radius: .5rem;
-}
-
-.btn {
-  background-color: transparent;
-  border: none;
-  font-weight: 500;
-  color: rgb(10, 9, 9);
-  cursor: pointer;
-}
- */ 
-
- .details {
-  /* display: block; */
+.details {
+  display: flex;
   flex-direction: row;
-  align-items: flex-start; 
+  align-items: flex-start;
 }
 
 .grid-container {
-  display: grid;
-  column-gap: 50px;
+  margin-right: 50px;
+  /* border: 1px solid red; */
+  width: 65%;
+}
+
+.grid-container-img {
+  width: 50%;
+  height: 350px;
 }
 
 .grid-image {
-  display: flex ;
-  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  /* height: 400px; */
+  /* align-items: flex-start;
   grid-column-start: 1;
   grid-column-end: 1;
   grid-row-start: 1;
-  grid-row-end: 3;
-
-
+  grid-row-end: 3; */
 }
 
 .grid-details {
-  display : block;
-  align-items: flex-end;
-  grid-column-start: 2;
-  grid-column-end: 4;
-  grid-row-start: 1;
-  grid-row-end: 3;
+  display: flex;
+  flex-direction: column;
+  /* border: 1px red solid; */
 }
 
 .book-img {
-  height: 175px;
-  width: 30%;
-  position: relative;
-  /* margin-right: 10rem; */
+  width: 100%;
+  /* border: 1px solid red; */
 }
 
 .book-img p {
@@ -84,22 +45,15 @@
 }
 
 .description {
-  position: relative;
-  display: block;
-  /* display: -webkit-box; */
-  /* -webkit-box-orient: vertical;
-  -webkit-line-clamp: 15; */
-  /* overflow: hidden; */
-  margin-left: 16rem; 
-  margin-bottom: 0rem; 
-  /* flex-grow: 1; */
+  width: 100%;
+  /* border: 1px solid red; */
 }
 
 .read-more-read-less {
-  background-color: #225f77; 
+  background-color: #225f77;
   /* box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1); */
   padding: 2.5rem;
-  border-radius: .5rem;
+  border-radius: 0.5rem;
 }
 
 .btn {
@@ -109,5 +63,15 @@
   color: rgb(28, 4, 83);
   cursor: pointer;
   margin-top: 0rem;
-  display:inline-block;
+  display: inline-block;
+}
+
+.scheduleForm {
+  width: 100%;
+  margin-top: 30px;
+  /* border: 1px solid red; */
+}
+
+.cancel {
+  margin-top: 20px;
 }
