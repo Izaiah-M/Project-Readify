@@ -20,7 +20,7 @@ export const BookCard = ({ image, title, description, author, category }) => {
         <p className="p">{title}</p>
       </div>
       {selectedBook && (
-        <div className="modal-overlay" onClick={handleClose}>
+        <div className="modal-overlay">
           <div className="modal">
             <BookDetails
               book={selectedBook}
