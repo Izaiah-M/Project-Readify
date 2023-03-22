@@ -2,7 +2,6 @@ import React from "react";
 
 import { BsHouseDoorFill, BsBookHalf, BsFillAlarmFill } from "react-icons/bs";
 import SideNav, {
-  Toggle,
   NavItem,
   NavIcon,
   NavText,

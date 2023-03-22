@@ -1,16 +1,77 @@
 .details {
   display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: flex-start;
 }
 
-.book-img img {
-  height: 600px;
+.grid-container {
+  margin-right: 50px;
+  /* border: 1px solid red; */
+  width: 65%;
+}
+
+.grid-container-img {
+  width: 50%;
+  height: 350px;
+}
+
+.grid-image {
+  display: flex;
+  flex-direction: column;
+  /* height: 400px; */
+  /* align-items: flex-start;
+  grid-column-start: 1;
+  grid-column-end: 1;
+  grid-row-start: 1;
+  grid-row-end: 3; */
+}
+
+.grid-details {
+  display: flex;
+  flex-direction: column;
+  /* border: 1px red solid; */
+}
+
+.book-img {
   width: 100%;
+  /* border: 1px solid red; */
 }
 
 .book-img p {
   font-size: larger;
   font-weight: bolder;
   color: yellow;
+  margin-top: 1rem;
+}
+
+.description {
+  width: 100%;
+  /* border: 1px solid red; */
+}
+
+.read-more-read-less {
+  background-color: #225f77;
+  /* box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1); */
+  padding: 2.5rem;
+  border-radius: 0.5rem;
+}
+
+.btn {
+  background-color: transparent;
+  border: none;
+  font-weight: 100;
+  color: rgb(28, 4, 83);
+  cursor: pointer;
+  margin-top: 0rem;
+  display: inline-block;
+}
+
+.scheduleForm {
+  width: 100%;
+  margin-top: 30px;
+  /* border: 1px solid red; */
+}
+
+.cancel {
+  margin-top: 20px;
 }
