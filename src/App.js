@@ -82,6 +82,39 @@ function App() {
     );
   };
 
+  const handleBookAdd = (e) => {
+    e.preventDefault();
+
+    const newEventWithId = {
+      id: uuidv4(),
+      title: newEvent.title,
+      book: {
+        title: newEvent.book.title,
+        description: newEvent.book.description,
+        img: newEvent.book.img,
+      },
+      start: newEvent.start,
+      end: newEvent.end,
+    };
+
+    setAllEvents([...allEvents, newEventWithId]);
+
+    setNewEvent({
+      title: "",
+      book: {
+        title: "",
+        description: "",
+        img: "",
+      },
+      start: "",
+      end: "",
+    });
+
+    console.log(
+      `Book with title :${newEventWithId.book.title} and image: ${newEventWithId.book.img}`
+    );
+  };
+
   const handleRemoveEvent = (eventId) => {
     const updatedEvents = allEvents.filter((event) => event.id !== eventId);
     setAllEvents(updatedEvents);
@@ -137,7 +170,7 @@ function App() {
             path={ROUTES.BOOKSEARCH}
             element={
               <Search
-                handleBookSubmit={handleAddEvent}
+                handleBookSubmit={handleBookAdd}
                 newEvent={newEvent}
                 setNewEvent={setNewEvent}
               />

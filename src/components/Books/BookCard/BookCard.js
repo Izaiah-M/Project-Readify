@@ -68,7 +68,15 @@ export const BookCard = ({
                       placeholder="Add Title"
                       value={newEvent.title}
                       onChange={({ target }) =>
-                        setNewEvent({ ...newEvent, title: target.value })
+                        setNewEvent({
+                          ...newEvent,
+                          title: target.value,
+                          book: {
+                            title: { title },
+                            description: { description },
+                            img: { image },
+                          },
+                        })
                       }
                     />
 
