@@ -79,24 +79,23 @@ img {
   padding: 4px;
   cursor: pointer;
   border: none;
-  /* border: 1px solid red; */
 }
 
 .modal button:hover {
   background-color: #555;
 }
 
-/* Responsive styles */
-@media only screen and (max-width: 767px) {
+/* Responsive styles  */
+@media only screen and (max-width: 1020px) {
   .close {
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 10px;
+    margin-left: 700px;
+    /* margin-right: auto; */
+    margin-bottom: 20px;
   }
 
   .modal {
-    display: flex;
-    flex-direction: row;
+    /* display: flex;
+    flex-direction: column; */
     padding: 10px;
     width: 100%;
     max-height: 100vh;
@@ -109,11 +108,11 @@ img {
   }
 }
 
-@media only screen and (min-width: 768px) and (max-width: 1199px) {
+@media only screen and (min-width: 768px) and (max-width: 1020px) {
   .close {
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 10px;
+    margin-left: 700px;
+    /* margin-right: auto; */
+    margin-bottom: 20px;
   }
 
   .modal {
@@ -124,14 +123,17 @@ img {
   }
 }
 
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 100px) {
   .close {
-    margin-left: 700px;
+    margin-left: auto;
     margin-bottom: 20px;
   }
 
   .modal {
+    display: inline-block;
+    /* flex-direction: column; */
     width: 70%;
     max-height: 90vh;
   }
 }
+

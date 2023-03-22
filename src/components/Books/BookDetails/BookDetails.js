@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React from "react";
 import "./BookDetails.css";
 import ReadMoreReadless from "./ReadMoreReadless";
 import ReactDatePicker from "react-datepicker";
@@ -21,15 +21,15 @@ export const BookDetails = ({
 
   return (
     <div className="details">
-      <div class="grid-container">
-        <div class="grid-image">
+      <div className="grid-container">
+        <div className="grid-image">
           <img src={image} alt={title} />
           <p>{title}</p>
         </div>
       </div>
 
-      <div class="grid-container">
-        <div class="grid-details">
+      <div className="grid-container">
+        <div className="grid-details">
           <div className="description">
             <ReadMoreReadless limit={150} text={description} />
           </div>
