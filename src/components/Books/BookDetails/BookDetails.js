@@ -31,7 +31,7 @@ export const BookDetails = ({
       <div className="grid-container">
         <div className="grid-details">
           <div className="description">
-            <ReadMoreReadless limit={80} text={description} />
+            <ReadMoreReadless limit={150} text={description} />
           </div>
           <div>
             <p>Authors: {author}</p>
