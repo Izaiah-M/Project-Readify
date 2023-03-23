@@ -15,6 +15,7 @@ export const BookCard = ({
   handleSubmit,
   newEvent,
   setNewEvent,
+  searched,
 }) => {
   const [selectedBook, setSelectedBook] = useState(null);
   const [clickSchedule, setClickSchedule] = useState(false);
@@ -39,7 +40,11 @@ export const BookCard = ({
 
   return (
     <>
-      <div className="book-card" onClick={handleBookClick}>
+      <div
+        key={searched}
+        className={`book-card ${searched ? "show" : ""}`}
+        onClick={handleBookClick}
+      >
         <img src={image} alt={title} />
         <p className="p">{title}</p>
       </div>

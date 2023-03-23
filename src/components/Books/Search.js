@@ -8,6 +8,7 @@ import "./Search.css";
 export const Search = ({ handleBookSubmit, newEvent, setNewEvent }) => {
   const [data, setData] = useState([]);
   const [searchParams, setSearchParams] = useState("");
+  const [searched, setSearched] = useState(false);
 
   const bookData = async (searchValue) => {
     try {
@@ -29,6 +30,7 @@ export const Search = ({ handleBookSubmit, newEvent, setNewEvent }) => {
   const handleSearchSubmit = (e) => {
     e.preventDefault();
 
+    setSearched(true);
     bookData(searchParams);
     setSearchParams("");
   };
@@ -45,6 +47,7 @@ export const Search = ({ handleBookSubmit, newEvent, setNewEvent }) => {
         handleSubmit={handleBookSubmit}
         newEvent={newEvent}
         setNewEvent={setNewEvent}
+        searched={searched}
       />
     </div>
   );
