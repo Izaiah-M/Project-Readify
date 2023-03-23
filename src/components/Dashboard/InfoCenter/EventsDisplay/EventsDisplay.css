@@ -20,6 +20,7 @@
 
 .contents {
   width: 100%;
+  /* border: 1px solid red; */
 }
 
 .contents .pa {
@@ -76,4 +77,24 @@
 .task:hover .close-btn {
   display: block;
   cursor: pointer;
+}
+
+@media only screen and (max-width: 1020px) {
+  .contents {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .img-container {
+    height: 90%;
+    display: flex;
+    justify-content: center;
+    margin-right: 20px;
+  }
+
+  .event-container {
+    height: 90%;
+  }
 }

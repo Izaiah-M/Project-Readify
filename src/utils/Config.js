@@ -31,7 +31,13 @@ const BookRequests = {
   },
 
   getRandomBook: async () => {
-    const categories = ["romance", "education", "fiction", "adventure"];
+    const categories = [
+      "romance",
+      "education",
+      "fiction",
+      "adventure",
+      "sci-fi",
+    ];
 
     // To pick a random book categorie
     const randomCategory =

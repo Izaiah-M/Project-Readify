@@ -14,49 +14,50 @@ export const InfoCenter = ({
 }) => {
   return (
     <div className="infocenter-card">
-      <div className="display-container">
-        <div className="displaying">
-          <EventsDisplay
-            events={allEvents}
-            selectedDate={selectedDate}
-            onRemoveEvent={handleRemoveEvent}
-          />
-        </div>
+      <div className="displaying">
+        <EventsDisplay
+          events={allEvents}
+          selectedDate={selectedDate}
+          onRemoveEvent={handleRemoveEvent}
+        />
       </div>
-      <h2 style={{ color: "white" }}>Add New Event</h2>
-      <div>
-        <form onSubmit={handleSubmit}>
-          <input
-            type="text"
-            required
-            placeholder="Add Title"
-            value={newEvent.title}
-            onChange={({ target }) =>
-              setNewEvent({ ...newEvent, title: target.value })
-            }
-          />
 
-          <div className="selectday">
-            <ReactDatePicker
-              className="start-date"
+      <div className="infoForm">
+        <h2 style={{ color: "white" }}>Add New Event</h2>
+        <div className="event-form">
+          <form onSubmit={handleSubmit}>
+            <input
+              type="text"
               required
-              value={newEvent.start}
-              placeholderText="Start Date"
-              selected={newEvent.start}
-              onChange={(start) => setNewEvent({ ...newEvent, start })}
+              placeholder="Add Title"
+              value={newEvent.title}
+              onChange={({ target }) =>
+                setNewEvent({ ...newEvent, title: target.value })
+              }
             />
 
-            <ReactDatePicker
-              className="end-date"
-              required
-              value={newEvent.end}
-              placeholderText="End Date"
-              selected={newEvent.end}
-              onChange={(end) => setNewEvent({ ...newEvent, end })}
-            />
-          </div>
-          <input type="submit" value="Add Event" className="submit-btn" />
-        </form>
+            <div className="selectday">
+              <ReactDatePicker
+                className="start-date"
+                required
+                value={newEvent.start}
+                placeholderText="Start Date"
+                selected={newEvent.start}
+                onChange={(start) => setNewEvent({ ...newEvent, start })}
+              />
+
+              <ReactDatePicker
+                className="end-date"
+                required
+                value={newEvent.end}
+                placeholderText="End Date"
+                selected={newEvent.end}
+                onChange={(end) => setNewEvent({ ...newEvent, end })}
+              />
+            </div>
+            <input type="submit" value="Add Event" className="submit-btn" />
+          </form>
+        </div>
       </div>
     </div>
   );

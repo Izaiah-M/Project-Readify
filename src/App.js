@@ -26,6 +26,7 @@ function App() {
     start: "",
     end: "",
   });
+
   const [selectedDate, setSelectedDate] = useState(new Date());
 
   const gettingLocalStorage = () => {
