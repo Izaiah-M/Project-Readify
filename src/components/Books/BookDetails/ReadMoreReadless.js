@@ -21,7 +21,9 @@ const ReadMoreReadless = ({ limit, text }) => {
           </p>
         )
       ) : (
-        <p>Sorry, no description on this book.</p>
+        <p style={{ fontWeight: "bolder" }}>
+          Sorry, no description found on this book.
+        </p>
       )}
       {text && text.length > 0 && (
         <button className="btn" onClick={toggleText}>
