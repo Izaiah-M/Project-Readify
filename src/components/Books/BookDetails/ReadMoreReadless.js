@@ -11,17 +11,23 @@ const ReadMoreReadless = ({ limit, text }) => {
 
   return (
     <div className="read-more-read-less">
-      {showFullText ? (
-        <p>{text}</p>
+      {text && text.length > 0 ? (
+        showFullText ? (
+          <p>{text}</p>
+        ) : (
+          <p>
+            {text.substr(0, limit)}
+            <span className="dots">...</span>
+          </p>
+        )
       ) : (
-        <p>
-          {text.substr(0, limit)}
-          <span className="dots">...</span>
-        </p>
+        <p>Sorry, no description on this book.</p>
       )}
-      <button className="btn" onClick={toggleText}>
-        {showFullText ? "Read Less" : "Read More"}
-      </button>
+      {text && text.length > 0 && (
+        <button className="btn" onClick={toggleText}>
+          {showFullText ? "Read Less" : "Read More"}
+        </button>
+      )}
     </div>
   );
 };

@@ -4,6 +4,10 @@
   transform: translateY(-10px);
 }
 
+/* .book-card {
+  transition: 0.7s;
+} */
+
 img {
   border-radius: 10px;
   width: 100%;
@@ -136,4 +140,3 @@ img {
     max-height: 90vh;
   }
 }
-
