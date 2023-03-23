@@ -1,7 +1,7 @@
 import axios from "axios";
 // const axios = require("axios");
 
-const APIKEY = "AIzaSyCzwGl8yfmrxI2MSmEveV0YZhpIxjP2DOg";
+const APIKEY = process.env.REACT_APP_API_KEY;
 const baseURL = "https://www.googleapis.com";
 const endPoint = `/books/v1/volumes`;
 
