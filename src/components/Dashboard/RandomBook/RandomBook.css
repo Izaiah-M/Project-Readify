@@ -1,10 +1,9 @@
-
 .randbook-container {
   position: relative;
   display: flex;
   height: 150px;
   margin-bottom: 30px;
-  margin-left: 90px;
+  margin-left: 80px;
   padding: 10px;
   border-radius: 7px;
   background-color: #040a14;
@@ -58,3 +57,8 @@
   display: flex;
 }
 
+@media only screen and (max-width: 1020px) {
+  .randbook-container {
+    margin-left: 30px;
+  }
+}

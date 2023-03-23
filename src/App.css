@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  /* border: 1px solid red; */
 }
 
 .App-header {
@@ -11,3 +12,12 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
+
+/* @media only screen and (max-width: 1020px) {
+  .App {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+} */

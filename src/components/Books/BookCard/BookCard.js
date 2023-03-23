@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { BookDetails } from "../BookDetails/BookDetails";
 import "./BookCard.css";
-import ReactDatePicker from "react-datepicker";
+
 import "react-datepicker/dist/react-datepicker.css";
 
 import { BsXLg } from "react-icons/bs";

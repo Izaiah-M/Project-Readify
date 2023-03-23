@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 import "./RandomBook.css";
@@ -19,27 +18,30 @@ export const RandomBook = ({ books }) => {
   };
 
   return (
-    <>
-      <div className="randbook-container">
-        {currentPage > 1 && (
-          <button className="randbook-arrow randbook-arrow-left" onClick={handlePrevPage}>
-            <FaArrowLeft />
-          </button>
-        )}
-        {books.slice(startIndex, endIndex).map((book, index) => {
-          return (
-            <div key={index} className="randbook-card">
-              <img src={book.image} alt={book.title} />
-            </div>
-          );
-        })}
-        {currentPage < totalPages && (
-          <button className="randbook-arrow randbook-arrow-right" onClick={handleNextPage}>
-            <FaArrowRight />
-          </button>
-        )}
-      </div>
-    </>
+    <div className="randbook-container">
+      {currentPage > 1 && (
+        <button
+          className="randbook-arrow randbook-arrow-left"
+          onClick={handlePrevPage}
+        >
+          <FaArrowLeft />
+        </button>
+      )}
+      {books.slice(startIndex, endIndex).map((book, index) => {
+        return (
+          <div key={index} className="randbook-card">
+            <img src={book.image} alt={book.title} />
+          </div>
+        );
+      })}
+      {currentPage < totalPages && (
+        <button
+          className="randbook-arrow randbook-arrow-right"
+          onClick={handleNextPage}
+        >
+          <FaArrowRight />
+        </button>
+      )}
+    </div>
   );
 };
-
